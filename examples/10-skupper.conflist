@@ -1,0 +1,18 @@
+{
+  "cniVersion": "1.0.0",
+  "name": "skupper-network",
+  "plugins": [
+    {
+      "type": "skupper-cni",
+      "mtu": 1500,
+      "interfaceName": "tun0",
+      "ipam": {
+        "type": "whereabouts",
+        "range": "10.244.0.0/16",
+        "range_start": "10.244.1.0",
+        "range_end": "10.244.1.255",
+        "gateway": "10.244.1.1"
+      }
+    }
+  ]
+}
